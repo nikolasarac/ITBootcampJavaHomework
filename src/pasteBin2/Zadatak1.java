@@ -1,0 +1,31 @@
+package pasteBin2;
+
+import java.util.Scanner;
+
+public class Zadatak1 {
+
+    static void obrniNiz(int[] niz) {
+        for (int i = niz.length - 1; i >= 0; i--) {
+            System.out.print(niz[i] + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        /*
+         *  Omoguciti da korisnik unese n brojeva preko skenera i smestiti ih u niz. Ispisati taj niz u obrtnutom redosledu
+         *  b) Napraviti funkciju koja ispisuje dat niz u obrnutom redosledu
+         * */
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Unesite broj koji odredjuje duzinu niza: ");
+        int duzinaNiza = sc.nextInt();
+        int[] niz = new int[duzinaNiza];
+
+        System.out.println("Unesite " + duzinaNiza + " brojeva u niz: ");
+        for (int i = 0; i < niz.length; i++) {
+            niz[i] = sc.nextInt();
+        }
+        obrniNiz(niz);
+    }
+}
